@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria do João</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzaria do João</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <div class="card">
+            <h3>Pizza de Calabresa</h3>
+            <p>Deliciosa pizza de calabresa com cebola, muçarela e molho de tomate.</p>
+            <button onclick="adicionarAoPedido('Pizza de Calabresa')">Adicionar ao Pedido</button>
+        </div>
+        <div class="card">
+            <h3>Pizza de Mussarela</h3>
+            <p>Clássica pizza de mussarela com molho de tomate e orégano.</p>
+            <button onclick="adicionarAoPedido('Pizza de Mussarela')">Adicionar ao Pedido</button>
+        </div>
+        <!-- Adicione mais pizzas conforme necessário -->
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Para fazer seu pedido, entre em contato pelo WhatsApp: <strong>(XX) XXXX-XXXX</strong>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pizzaria do João</p>
+    </footer>
+
+    <script>
+        function adicionarAoPedido(item) {
+            // Concatena o item ao pedido
+            let pedido = encodeURIComponent(`Olá Boa Noite. Gostaria de pedir uma ${item}.`);
+            // Substitua (XX) XXXX-XXXX pelo número de WhatsApp da pizzaria
+            let whatsappURL = `https://api.whatsapp.com/send?phone=5511986911310&text=${pedido}`;
+            // Abre uma nova janela com o WhatsApp para enviar o pedido
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
