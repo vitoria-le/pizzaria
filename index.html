@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzaria do João</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Alô Pizza</title>
+    <link rel="shortcut icon" href="image/pizza.ico.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
     <header>
-        <h1>Pizzaria do João</h1>
-        <nav>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+        <nav class="nav-bar">     
+            <div class = "logo" >
+                <img src="image/logoPizzaria.png" alt="logo de pizza">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="button-pedido">
+                <button><a href="#">Faça seu pedido</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class= "icon" src="image/menu_white_36dp.svg" alt=""></button>
+                
+            </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="button-pedido">
+                <button><a href="#">Faça seu pedido</a></button>
+            </div>
+        </div>
+        
     </header>
 
     <section id="menu">
@@ -30,11 +55,6 @@
             <button onclick="adicionarAoPedido('Pizza de Mussarela')">Adicionar ao Pedido</button>
         </div>
         <!-- Adicione mais pizzas conforme necessário -->
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Para fazer seu pedido, entre em contato pelo WhatsApp: <strong>(XX) XXXX-XXXX</strong>.</p>
     </section>
 
     <footer>
