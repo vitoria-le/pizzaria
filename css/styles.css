@@ -101,28 +101,70 @@ header {
     }
 }
 
-section {
-    padding: 20px;
-}
-
-.card {
-    background-color: #f4f4f4;
-    border-radius: 5px;
+.menu-item {
+    border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
-}
+    margin-bottom: 10px;
+  }
 
-button {
-    background-color: #333;
-    color: #fff;
+  .cart{
+    display: flex;
+    flex-direction: row-reverse;
+   display: none;
+  }
+  
+  .cart-content {
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 30px;
+  
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cart-items li {
+    margin-bottom: 5px;
+  }
+  
+  #checkout {
+    margin-top: 10px;
+  }
+  #order-details {
+    margin-top: 20px;
+  }
+  
+  #order-details label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #order-details input, #order-details select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #order-details select {
+    width: 100%;
+  }
+  .cart-menu{
+    display: block;
+  }
+
+  .cart-menu button{
+    background-color: transparent;
     border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
+  }
+  .open {
+    display: block;
 }
 
 footer {

@@ -41,35 +41,55 @@
         </div>
         
     </header>
+    <h1>Menu</h1>
 
-    <section id="menu">
-        <h2>Menu</h2>
-        <div class="card">
-            <h3>Pizza de Calabresa</h3>
-            <p>Deliciosa pizza de calabresa com cebola, muçarela e molho de tomate.</p>
-            <button onclick="adicionarAoPedido('Pizza de Calabresa')">Adicionar ao Pedido</button>
-        </div>
-        <div class="card">
-            <h3>Pizza de Mussarela</h3>
-            <p>Clássica pizza de mussarela com molho de tomate e orégano.</p>
-            <button onclick="adicionarAoPedido('Pizza de Mussarela')">Adicionar ao Pedido</button>
-        </div>
-        <!-- Adicione mais pizzas conforme necessário -->
-    </section>
+    <div class="menu-item" data-name="Pizza Margherita" data-price="10">
+      <h2>Pizza Margherita</h2>
+      <p>R$ 10</p>
+      <button class="add-to-cart">Adicionar ao Carrinho</button>
+    </div>
+  
+    <div class="menu-item" data-name="Pizza Pepperoni" data-price="12">
+      <h2>Pizza Pepperoni</h2>
+      <p>R$ 12</p>
+      <button class="add-to-cart">Adicionar ao Carrinho</button>
+    </div>
+  
+    <div class="cart">
+        <div class="cart-content">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total: R$ 0</p>
+            <button id="checkout" disabled>Finalizar Pedido</button>
+            <button id="clear-cart">Limpar Carrinho</button>
+    
+            <div id="order-details">
+                <label for="address">Endereço de Entrega (CEP-Rua-Bairro-Numero):</label>
+                <input type="text" id="address" name="address">
+    
+                <label for="payment-method">Forma de Pagamento:</label>
+             <select id="payment-method" name="payment-method">
+                  <option value="Dinheiro">Dinheiro</option>
+               <option value="Cartão de Crédito">Cartão de Crédito</option>
+                  <option value="Cartão de Débito">Cartão de Débito</option>
+                </select>
 
+            </div>
+           
+        </div>
+        
+    </div>
+    <div class="cart-menu">
+        <button onclick="cartShow()"><img class= "ico" src="image/carrinho-menu.svg" alt=""></button>  
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>    
+    
     <footer>
         <p>&copy; 2024 Pizzaria do João</p>
     </footer>
 
-    <script>
-        function adicionarAoPedido(item) {
-            // Concatena o item ao pedido
-            let pedido = encodeURIComponent(`Olá Boa Noite. Gostaria de pedir uma ${item}.`);
-            // Substitua (XX) XXXX-XXXX pelo número de WhatsApp da pizzaria
-            let whatsappURL = `https://api.whatsapp.com/send?phone=5511986911310&text=${pedido}`;
-            // Abre uma nova janela com o WhatsApp para enviar o pedido
-            window.open(whatsappURL, '_blank');
-        }
-    </script>
 </body>
 </html>
