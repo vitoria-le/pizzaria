@@ -8,6 +8,21 @@ function menuShow(){
         document.querySelector('.icon').src = "image/close_white_36dp.svg";
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const orderButton = document.querySelector('.button-pedido button');
+
+  orderButton.addEventListener('click', function() {
+      
+      const footer = document.querySelector('footer');
+      const footerPosition = footer.getBoundingClientRect().top + window.scrollY;
+
+      
+      window.scrollTo({
+          top: footerPosition,
+          behavior: 'smooth'
+      });
+  });
+});
     
 document.addEventListener('DOMContentLoaded', function () {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -77,14 +92,5 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  function cartShow(){
-    let menuMobile = document.querySelector('.cart');
-    if (menuMobile.classList.contains('open')) {
-        menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "image/carrinho-menu.svg";
-    } else {
-        menuMobile.classList.add('open');
-        document.querySelector('.icon').src = "image/carrinho-menu.svg";
-    }
-}
+  
   

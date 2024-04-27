@@ -2,8 +2,20 @@
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+body{
+  background-image: url('../image/fundo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+section{
+  height: 60vh;
+  
+}
 header {
     background-color: #333;
     box-shadow: 0px 3px 10px #333;
@@ -13,6 +25,7 @@ header {
     justify-content: space-between;
     padding: 1.5rem 6rem;
     margin: 1.6rem;
+    
 }
 .logo{
     position: flex;
@@ -99,31 +112,77 @@ header {
     .open {
         display: block;
     }
+    
 }
 
-.menu-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+h1{
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #333;
+  margin-bottom: 30px;
+  width: 300px;
+  border-radius: 15px;
+}
+.menu-pizza{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin : 20px;
+  overflow-x: auto;
+  
+}
+
+ .menu-item{
+  box-shadow: 4px 4px 12px #aaaa;
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    margin-left: 40px;
+    text-align: center;
+    background-color: #fff;
+
   }
+  .title{
+    font-weight: bold;
+  }
+  
+  .add-to-cart{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #B2D235;
+    color: #fff;
+    
+    
+  }
+  
 
   .cart{
     display: flex;
-    flex-direction: row-reverse;
-   display: none;
-  }
-  
-  .cart-content {
-    border: 1px solid #ccc;
-    border-radius: 10%;
-    padding: 20px;
-    margin: 30px;
-  
-  }
+    justify-content: center;
+    
+    
+    }
+    .cart-content{
+      background-color: #fff;
+      box-shadow: 4px 4px 12px #aaaa;
+      border-radius: 15px;
+      padding: 15px;
+      margin-left: 40px;
+    }
+    .cart-content button{
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #B2D235;
+      color: #fff;
+    }
   
   #cart-items {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
   }
   
   #cart-items li {
@@ -163,16 +222,14 @@ header {
     border: none;
     cursor: pointer;
   }
-  .open {
-    display: block;
-}
+
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    
     width: 100%;
     bottom: 0;
 }
