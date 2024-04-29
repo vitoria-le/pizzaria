@@ -8,21 +8,7 @@ function menuShow(){
         document.querySelector('.icon').src = "image/close_white_36dp.svg";
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
-  const orderButton = document.querySelector('.button-pedido button');
 
-  orderButton.addEventListener('click', function() {
-      
-      const footer = document.querySelector('footer');
-      const footerPosition = footer.getBoundingClientRect().top + window.scrollY;
-
-      
-      window.scrollTo({
-          top: footerPosition,
-          behavior: 'smooth'
-      });
-  });
-});
     
 document.addEventListener('DOMContentLoaded', function () {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -91,6 +77,23 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open(whatsappLink);
       });
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const orderButton = document.querySelector('.button-pedido button');
 
+    orderButton.addEventListener('click', function() {
+        const cartElement = document.querySelector('.cart');
+
+        if (cartElement) {
+            const cartPosition = cartElement.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: cartPosition,
+                behavior: 'smooth'
+            });
+        } else {
+            console.error('Elemento .cart não encontrado.');
+        }
+    });
+});
   
   
