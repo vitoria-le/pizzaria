@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         orderText += `Endereço de entrega : ${address}\n`;
         orderText += `Forma de pagamento: ${paymentMethod}`;
     
-        const phoneNumber = "5511986911310"; 
+        const phoneNumber = "5511999999999"; 
         const encodedOrderText = encodeURIComponent(orderText);
         const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedOrderText}`;
     
